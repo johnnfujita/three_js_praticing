@@ -89,3 +89,18 @@
     - castShadow and receiveShadow to each object
     - only pointlight, spotlight, directional light can support shadow
     - when defining the dimensions, if the values are too small the shadows will be cropped
+
+### 17 particles -
+
+    - Particles are surfaces that can be instantiated as point materials, and behave as sparse repetitive geometries.
+
+### 19 - galaxy-generator -
+
+    - in depth application of particles, some really inspiring solutions to achieve the wanted results
+
+### 20 - physics
+
+    - Can be customized from vanilla three.js
+    - usually is better to use a third party physics library
+    - a parallel world with the physical properties must be created, in addition to the three.js world, everyframe you take the coordinate from the physical relative object and mirror it in the three.js world.
+    
