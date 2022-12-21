@@ -103,4 +103,51 @@
     - Can be customized from vanilla three.js
     - usually is better to use a third party physics library
     - a parallel world with the physical properties must be created, in addition to the three.js world, everyframe you take the coordinate from the physical relative object and mirror it in the three.js world.
-    
+    - method to apply forces
+        - applyForce (use just this)
+        - applyImpulse (bypass f=ma directly to mv)
+        - applyLocalForce
+        - applyLocalImpulse
+    - Test bodies against all bodies in the world is a bad pratice,
+        - grid broadface will separate the world in a 3d grid, and test only against bodies a grid apart
+
+    - Constraints:
+        -hingeConstraint (like a door)
+        - DistanceContraint: (2 bodies minimal distance)
+        - LockContatraint: (2 like one rigid body)
+        - PointToPointConstraint: glues 2 bodies to a specific point
+
+### 21 - Imports
+    File formats:
+        Components
+        Weight
+        Compression
+        Compatibility
+        Copyrights
+
+    GL Trasmmission Format is proeminent nowadays
+        - Supports all kinds of data like:
+            - skeletons, morphing, animations, scene graph, materials, cameras, lights, geometries
+            - Becoming standard
+        
+        GLTF TYPE:
+            - glTF:
+                Multiple files
+                duck.gltf JSON
+                Duck0.bin contains geometru
+                duckCM.png is texture
+            -glTF-binary:
+                Easier to load
+                Ligther
+                Harder to alter its data
+            -glTF-draco:
+                - simple glTF compressed with draco algorithm
+            glTF-embbeded:
+                first one but in one file
+                very heavy
+        - ADDING:
+            - You can add the whole scene (not efficient)
+            -add the children, or filter them
+
+
+
